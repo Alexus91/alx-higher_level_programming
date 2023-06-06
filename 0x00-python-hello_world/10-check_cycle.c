@@ -4,17 +4,17 @@
  * @list: linked list to beb checked
  * Return: 1 if cycle exist ,0 if doesn't
  */
-int check_cycle(list_t *list)
+int check_cycle(listint_t *list)
 {
-	listin_t *s = list;
-	list_tin *f = list;
+	listint_t *s = list;
+	listint_t *f = list;
 
 	if (!list)
 		return (0);
 	while (s && f && f->next)
 	{
-		slow = s->next;
-		f = f->n->next;
+		s = s->next;
+		f = f->next->next;
 		if (s == f)
 			return (1);
 	}
