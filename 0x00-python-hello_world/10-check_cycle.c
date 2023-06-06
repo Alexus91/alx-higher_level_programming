@@ -6,8 +6,8 @@
  */
 int check_cycle(list_t *list)
 {
-	list_t *s = list;
-	list_t *f = list;
+	listin_t *s = list;
+	list_tin *f = list;
 
 	if (!list)
 		return (0);
