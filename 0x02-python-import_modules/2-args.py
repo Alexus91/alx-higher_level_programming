@@ -1,12 +1,14 @@
 #!/usr/bin/python3
+
 if __name__ == "__main__":
-    """basic arithmetic operation"""
-    from calculator_1 import add, sub, mul, div
+    """Print the number of and list of arguments."""
     import sys
-    number_args = len(sys.argv) - 1
-    print("{} argument{}:".format(number_args, 's' if number_args != 1 else ''))
-    if number_args > 0:
-        for i in range(1, number_args + 1):
-            print("{}: {}".format(i, sys.argv[i]))
+    ct = len(sys.argv) - 1
+    if ct == 0:
+        print("0 arguments.")
+    elif ct == 1:
+        print("1 argument:")
     else:
-        print("No arguments were passed.")
+        print("{} arguments:".format(ct))
+    for idx in range(ct):
+        print("{}: {}".format(idx + 1, sys.argv[idx + 1]))
