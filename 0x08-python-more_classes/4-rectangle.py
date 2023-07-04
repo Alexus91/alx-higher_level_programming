@@ -65,7 +65,8 @@ class Rectangle:
             if idx != self.__height - 1:
                 rect.append("\n")
         return ("".join(rect))
-     
+
+
     def __repr__(self):
         """Return the string representation."""
         rec = "Rectangle(" + str(self.__width)
