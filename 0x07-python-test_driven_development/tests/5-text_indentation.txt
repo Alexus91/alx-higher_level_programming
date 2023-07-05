@@ -1,0 +1,20 @@
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+>>> text_indentation("Hello?")
+Hello?
+<BLANKLINE>
+>>> text_indentation("   Hi there.")
+Hi there.
+<BLANKLINE>
+>>> text_indentation("    Woah now.    This is messy.   ")
+Woah now.
+<BLANKLINE>
+This is messy.
+<BLANKLINE>
+>>> text_indentation("No ending period, what bad grammar")
+No ending period, what bad grammar
+>>> text_indentation("write a new line! Here goes:\nPrinted.")
+write a new line! Here goes:
+<BLANKLINE>
+<BLANKLINE>
+Printed.
+<BLANKLINE>
