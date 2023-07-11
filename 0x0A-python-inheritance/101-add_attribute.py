@@ -2,9 +2,8 @@
 """function adds attributes to objects."""
 
 
-def add_attribute(obj, attr, value):
-    """Add a new attribute to an object if possible"""
-    try:
-        setattr(obj, attr, value)
-    except AttributeError:
+def add_attribute(obj, att, value):
+    """Add a new attribute to an object if possible."""
+    if not hasattr(obj, "__dict__"):
         raise TypeError("can't add new attribute")
+    setattr(obj, att, value)
