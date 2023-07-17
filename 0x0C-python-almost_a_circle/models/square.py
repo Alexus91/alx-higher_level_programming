@@ -25,6 +25,15 @@ class Square(Rectangle):
             for key, value in kwargs.items():
                 setattr(self, key, value)
 
+    def to_dictionary(self):
+        """To update the Square class by adding the to_dictionary """
+        return {
+            'id': self.id,
+            'size': self.width,
+            'x': self.x,
+            'y': self.y
+        }
+
     @property
     def size(self):
         return self.width
