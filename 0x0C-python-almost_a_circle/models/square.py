@@ -14,6 +14,16 @@ class Square(Rectangle):
         """ Returns printed string of an instance """
 
         return f"[Square] ({self.id}) {self.x}/{self.y} - {self.width}"
+    
+    def update(self, *args, **kwargs):
+        """Update the class Square by adding the public method"""
+        if args and len(args) > 0:
+            attr_names = ["id", "size", "x", "y"]
+            for i, arg in enumerate(args):
+                setattr(self, attr_names[i], arg)
+        else:
+            for key, value in kwargs.items():
+                setattr(self, key, value)
 
     @property
     def size(self):
