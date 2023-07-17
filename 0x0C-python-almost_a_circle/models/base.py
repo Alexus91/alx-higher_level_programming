@@ -32,3 +32,9 @@ class Base:
                 dictionaries = [obj.to_dictionary() for obj in list_objs]
                 json_string = cls.to_json_string(dictionaries)
                 file.write(json_string)
+
+    @staticmethod
+    def from_json_string(json_string):
+        if json_string is None or len(json_string) == 0:
+            return []
+        return json.loads(json_string)
