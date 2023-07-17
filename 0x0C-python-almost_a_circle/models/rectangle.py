@@ -22,8 +22,10 @@ class Rectangle(Base):
 
     def display(self):
         """prints in stdout the Rectangle"""
-        for _ in range(self.height):
-            print("#" * self.width)
+        for inx in range(self.y):
+            print()
+        for inx in range(self.height):
+            print(" " * self.x + "#" * self.width)
 
     def __str__(self):
         """returns [Rectangle] (<id>) <x>/<y> - <width>/<height>"""
