@@ -131,4 +131,3 @@ id  name
 6   Crime
 7   Suspense
 8   Thriller
-https://s3.amazonaws.com/alx-intranet.hbtn.io/uploads/medias/2020/3/bc2575fee3303b731031.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIARDDGGGOUSBVO6H7D%2F20230816%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20230816T233219Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=51f13f253c774b93d0af9284e84ac8c436716bb438e93c53ac31fde515477565
