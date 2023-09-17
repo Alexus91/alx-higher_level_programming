@@ -13,14 +13,7 @@ if __name__ == "__main__":
     curs.execute("""SELECT cities.name
                    FROM cities JOIN states ON cities.state_id = states.id
                    WHERE states.name = %(state)s""", {'state': argv[4]})
-    r = curs.fetchall()
-    le = len(r)
-    if le == 0:
-        print('')
-    for i in range(le):
-        if i < le - 1:
-            print(r[i][0], end=', ')
-        else:
-            print(r[i][0])
+    data = curs.fetchall()
+    print(", ".join(city[0] for city in data))
     curs.close()
     db.close()
