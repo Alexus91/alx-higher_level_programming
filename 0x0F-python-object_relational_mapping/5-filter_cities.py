@@ -17,7 +17,7 @@ if __name__ == "__main__":
     le = len(r)
     if le == 0:
         print('')
-    for i in range(l):
+    for i in range(le):
         if i < le - 1:
             print(r[i][0], end=', ')
         else:
