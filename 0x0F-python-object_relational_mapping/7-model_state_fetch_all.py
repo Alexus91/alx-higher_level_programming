@@ -10,9 +10,8 @@ if __name__ == "__main__":
     eng = create_engine('mysql+mysqldb://{}:{}@localhost/{}'.format(argv[1],
                                                                     argv[2],
                                                                     argv[3]))
-
-    Base.metadata.create_all(engi)
-    sess = sessionmaker(bind=engi)()
+    Base.metadata.create_all(eng)
+    sess = sessionmaker(bind=eng)()
     for state in sess.query(State).order_by(State.id):
         print("{}: {}".format(state.id, state.name))
     sess.close()
