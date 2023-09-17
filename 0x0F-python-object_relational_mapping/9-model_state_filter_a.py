@@ -15,7 +15,7 @@ if __name__ == "__main__":
                                                                     argv[3]))
     Base.metadata.create_all(eng)
     Session = sessionmaker(bind=engine)
-    session = Session()
+    sess = Session()
     sym = '%a%'
     states = sess.query(State).filter(State.name.like(sym)).order_by(State.id)
     for state in states:
