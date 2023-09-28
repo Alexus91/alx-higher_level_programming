@@ -3,18 +3,23 @@
 Find Peak task 6
 """
 
+
 def find_peak(list_of_integers):
-    if not list_of_integers:
+    """Return a peak in a list of unsorted integers."""
+    if list_of_integers == []:
         return None
 
-    left, right = 0, len(list_of_integers) - 1
+    size = len(list_of_integers)
+    if size == 1:
+        return list_of_integers[0]
+    elif size == 2:
+        return max(list_of_integers)
 
-    while left < right:
-        mid = (left + right) // 2
-
-        if list_of_integers[mid] > list_of_integers[mid + 1]:
-            right = mid
-        else:
-            left = mid + 1
-
-    return list_of_integers[left]
+    midd = int(size / 2)
+    pea = list_of_integers[midd]
+    if pea > list_of_integers[midd - 1] and pea > list_of_integers[midd + 1]:
+        return pea
+    elif pea < list_of_integers[midd - 1]:
+        return find_peak(list_of_integers[:midd])
+    else:
+        return find_peak(list_of_integers[midd + 1:])
