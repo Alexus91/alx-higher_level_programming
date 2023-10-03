@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""script that takes a URL, sends a request to the URL and displays the value"""
+"""script that takes a URL,sends request to the URL and displays the value"""
 
 import sys
 import requests
